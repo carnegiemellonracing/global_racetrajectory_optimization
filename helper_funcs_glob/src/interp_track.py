@@ -23,7 +23,7 @@ def interp_track(reftrack: np.ndarray,
     # FUNCTION BODY ----------------------------------------------------------------------------------------------------
     # ------------------------------------------------------------------------------------------------------------------
 
-    reftrack_cl = np.vstack((reftrack, reftrack[0]))
+    reftrack_cl = np.vstack((reftrack))
 
     # calculate element lengths (euclidian distance)
     el_lenghts = np.sqrt(np.sum(np.power(np.diff(reftrack_cl[:, :2], axis=0), 2), axis=1))

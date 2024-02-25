@@ -43,6 +43,8 @@ def prep_track(reftrack_imp: np.ndarray,
                              stepsize_prep=stepsize_opts["stepsize_prep"],
                              stepsize_reg=stepsize_opts["stepsize_reg"],
                              debug=debug)
+    
+    print(reftrack_interp)
 
     # calculate splines
     refpath_interp_cl = np.vstack((reftrack_interp[:, :2], reftrack_interp[0, :2]))
